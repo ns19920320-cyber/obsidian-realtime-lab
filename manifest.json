@@ -1,0 +1,9 @@
+{
+  "id": "realtime-lab",
+  "name": "Realtime Lab",
+  "version": "0.3.0",
+  "minAppVersion": "1.7.2",
+  "description": "Isolated Yjs collaboration experiment. Only marked Realtime-Lab vaults and one test note are supported.",
+  "author": "Local development",
+  "isDesktopOnly": false
+}

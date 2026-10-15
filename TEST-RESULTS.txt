@@ -1,0 +1,140 @@
+
+> obsidian-realtime-lab@0.3.0 test
+> node --test test/*.test.mjs
+
+TAP version 13
+# Subtest: actual CodeMirror bindings merge simultaneous editor transactions
+ok 1 - actual CodeMirror bindings merge simultaneous editor transactions
+  ---
+  duration_ms: 67.540625
+  type: 'test'
+  ...
+# Subtest: remote insertion maps laptop cursor instead of resetting it
+ok 2 - remote insertion maps laptop cursor instead of resetting it
+  ---
+  duration_ms: 3.394
+  type: 'test'
+  ...
+# Subtest: local undo preserves the other device input
+ok 3 - local undo preserves the other device input
+  ---
+  duration_ms: 3.489292
+  type: 'test'
+  ...
+# Subtest: Chinese composition-style incremental replacements reach the other editor
+ok 4 - Chinese composition-style incremental replacements reach the other editor
+  ---
+  duration_ms: 2.50825
+  type: 'test'
+  ...
+# Subtest: existing PersonalVault vault is rejected before any filesystem read or write
+ok 5 - existing PersonalVault vault is rejected before any filesystem read or write
+  ---
+  duration_ms: 0.645791
+  type: 'test'
+  ...
+# Subtest: test-like name alone cannot enable plugin without explicit marker
+ok 6 - test-like name alone cannot enable plugin without explicit marker
+  ---
+  duration_ms: 0.136916
+  type: 'test'
+  ...
+# Subtest: explicit independent test vault marker enables plugin
+ok 7 - explicit independent test vault marker enables plugin
+  ---
+  duration_ms: 0.065166
+  type: 'test'
+  ...
+# Subtest: BRAT-installed test vault can initialize without copying hidden files
+ok 8 - BRAT-installed test vault can initialize without copying hidden files
+  ---
+  duration_ms: 1.1965
+  type: 'test'
+  ...
+# Subtest: initialization never writes to an existing regular vault
+ok 9 - initialization never writes to an existing regular vault
+  ---
+  duration_ms: 0.185
+  type: 'test'
+  ...
+# Subtest: connection import accepts a separate WSS URL and token
+ok 10 - connection import accepts a separate WSS URL and token
+  ---
+  duration_ms: 0.090125
+  type: 'test'
+  ...
+# Subtest: connection import rejects script schemes and embedded credentials or secrets
+ok 11 - connection import rejects script schemes and embedded credentials or secrets
+  ---
+  duration_ms: 0.095584
+  type: 'test'
+  ...
+# Subtest: first seed is inserted only once; joining clients do not duplicate it
+ok 12 - first seed is inserted only once; joining clients do not duplicate it
+  ---
+  duration_ms: 52.105125
+  type: 'test'
+  ...
+# Subtest: phone types a character and laptop receives it under one second locally
+ok 13 - phone types a character and laptop receives it under one second locally
+  ---
+  duration_ms: 48.853125
+  type: 'test'
+  ...
+# Subtest: simultaneous insertions at same position retain both inputs
+ok 14 - simultaneous insertions at same position retain both inputs
+  ---
+  duration_ms: 55.957708
+  type: 'test'
+  ...
+# Subtest: concurrent replacement and insertion converge without whole-file overwrite
+ok 15 - concurrent replacement and insertion converge without whole-file overwrite
+  ---
+  duration_ms: 45.81075
+  type: 'test'
+  ...
+# Subtest: 100 edits from both ends converge, including Chinese and emoji
+ok 16 - 100 edits from both ends converge, including Chinese and emoji
+  ---
+  duration_ms: 1062.211875
+  type: 'test'
+  ...
+# Subtest: offline changes merge on reconnect
+ok 17 - offline changes merge on reconnect
+  ---
+  duration_ms: 68.262792
+  type: 'test'
+  ...
+# Subtest: server restart restores durable CRDT state
+ok 18 - server restart restores durable CRDT state
+  ---
+  duration_ms: 48.340709
+  type: 'test'
+  ...
+# Subtest: client CRDT snapshot restores offline edits after app restart
+ok 19 - client CRDT snapshot restores offline edits after app restart
+  ---
+  duration_ms: 73.53825
+  type: 'test'
+  ...
+# Subtest: unauthorized client is rejected before receiving any note content
+ok 20 - unauthorized client is rejected before receiving any note content
+  ---
+  duration_ms: 28.4725
+  type: 'test'
+  ...
+# Subtest: server ignores path input: clients cannot choose filesystem locations
+ok 21 - server ignores path input: clients cannot choose filesystem locations
+  ---
+  duration_ms: 3.888709
+  type: 'test'
+  ...
+1..21
+# tests 21
+# suites 0
+# pass 21
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1605.851916

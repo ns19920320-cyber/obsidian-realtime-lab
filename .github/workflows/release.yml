@@ -1,0 +1,31 @@
+name: Build and publish BRAT release
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      - run: npm run privacy-check
+      - name: Publish matching release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version=$(node -p "require('./manifest.json').version")
+          if gh release view "$version" >/dev/null 2>&1; then
+            echo "Release already exists; immutable version assets left unchanged."
+            exit 0
+          fi
+          gh release create "$version" main.js manifest.json --target "$GITHUB_SHA" --title "Realtime Lab $version (experimental)" --notes "BRAT installation assets for isolated test vaults only. Includes no credentials or personal data. Native iPhone and Obsidian acceptance testing is still required."

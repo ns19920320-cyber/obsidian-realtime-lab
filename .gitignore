@@ -1,0 +1,11 @@
+node_modules/
+work/
+data.json
+*.yjs
+*.tmp
+.env*
+paired/
+packages/
+LOCAL-SETUP.md
+LAN-SMOKE-RESULT.json
+.DS_Store

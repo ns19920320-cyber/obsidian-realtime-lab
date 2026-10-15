@@ -1,0 +1,30 @@
+{
+  "name": "obsidian-realtime-lab",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/*.test.mjs",
+    "start": "node src/server.mjs",
+    "privacy-check": "node scripts/privacy-check.mjs"
+  },
+  "dependencies": {
+    "ws": "^8.18.3",
+    "y-codemirror.next": "^0.3.5",
+    "yjs": "^13.6.27"
+  },
+  "devDependencies": {
+    "@codemirror/state": "^6.5.2",
+    "@codemirror/view": "^6.38.6",
+    "@types/jsdom": "^30.0.0",
+    "@types/node": "^22.0.0",
+    "@types/ws": "^8.18.1",
+    "esbuild": "^0.25.11",
+    "jsdom": "^29.1.1",
+    "obsidian": "^1.9.7",
+    "qrcode": "^1.5.4",
+    "typescript": "^5.9.3"
+  }
+}
